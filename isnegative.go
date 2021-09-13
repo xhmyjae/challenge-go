@@ -2,6 +2,12 @@ package main
 
 import "github.com/01-edu/z01"
 
+func main() {
+	IsNegative(3)
+	IsNegative(-2)
+	IsNegative(0)
+}
+
 func IsNegative(i int) {
 	if i < 0 {
 		z01.PrintRune('T')
@@ -9,10 +15,4 @@ func IsNegative(i int) {
 		z01.PrintRune('F')
 	}
 	z01.PrintRune('\n')
-}
-
-func main() {
-	IsNegative(3)
-	IsNegative(-2)
-	IsNegative(0)
 }
