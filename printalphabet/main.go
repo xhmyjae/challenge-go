@@ -6,5 +6,4 @@ func main() {
 	for alphabet := 'a'; alphabet <= 'z'; alphabet++ {
 		z01.PrintRune(alphabet)
 	}
-
 }
