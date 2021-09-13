@@ -1,13 +1,14 @@
 package main
 
+import "github.com/01-edu/z01"
+
 func IsNegative(i int) {
 	if i < 0 {
-		t := "T"
-		return t
+		z01.PrintRune('T')
 	} else {
-		f := "F"
-		return f
+		z01.PrintRune('F')
 	}
+	z01.PrintRune('\n')
 }
 
 func main() {
