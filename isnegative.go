@@ -2,9 +2,11 @@ package main
 
 func IsNegative(i int) {
 	if i < 0 {
-		println("T")
+		t := "T"
+		return t
 	} else {
-		println("F")
+		f := "F"
+		return f
 	}
 }
 
