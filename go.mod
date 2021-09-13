@@ -1,4 +1,4 @@
-module piscine
+module git
 
 go 1.17
 
