@@ -1,9 +1,0 @@
-package main
-
-import "github.com/01-edu/z01"
-
-func main() {
-	for alphabet := 'z'; alphabet <= 'a'; alphabet++ {
-		z01.PrintRune(alphabet)
-	}
-}
