@@ -6,8 +6,6 @@ func RecursiveFactorial(nb int) int {
 	} else if nb == 0 {
 		return 1
 	} else {
-		res := 1
-		res = RecursiveFactorial(nb+1) * res
-		return res
+		return nb * RecursiveFactorial(nb-1)
 	}
 }
