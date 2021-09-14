@@ -1,7 +1,6 @@
 package main
 
 import "github.com/01-edu/z01"
-import "piscine"
 
 func IsNegative(i int) {
 	if i < 0 {
@@ -13,7 +12,7 @@ func IsNegative(i int) {
 }
 
 func main() {
-	piscine.IsNegative(1)
-	piscine.IsNegative(0)
-	piscine.IsNegative(-1)
+	IsNegative(3)
+	IsNegative(-2)
+	IsNegative(0)
 }
