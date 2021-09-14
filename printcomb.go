@@ -8,7 +8,7 @@ func PrintComb() {
 		b := (digit / 10) % 10
 		c := digit % 10
 		if a < b && b < c {
-			z01.PrintRune('a', 'b', 'c', ',', ' ')
+			z01.PrintRune(a, b, c)
 		}
 	}
 }
