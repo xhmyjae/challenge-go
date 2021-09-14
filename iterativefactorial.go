@@ -1,4 +1,4 @@
-package main
+package piscine
 
 func IterativeFactorial(nb int) int {
 	res := 1
@@ -6,8 +6,4 @@ func IterativeFactorial(nb int) int {
 		res = res * i
 	}
 	return res
-}
-
-func main() {
-	print(IterativeFactorial(4))
 }
