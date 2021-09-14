@@ -2,7 +2,7 @@ package piscine
 
 import "github.com/01-edu/z01"
 
-func PrintComb() {
+func PrintComb2() {
 	for digit := 0; digit < 89; digit++ {
 		a := digit / 100
 		b := (digit / 10) % 10
