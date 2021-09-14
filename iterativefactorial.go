@@ -7,3 +7,7 @@ func IterativeFactorial(nb int) int {
 	}
 	return res
 }
+
+func main() {
+	print(IterativeFactorial(4))
+}
