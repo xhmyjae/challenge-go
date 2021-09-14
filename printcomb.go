@@ -11,9 +11,9 @@ func PrintComb() {
 			a += 48
 			b += 48
 			c += 48
-			z01.PrintRune(a)
-			z01.PrintRune(b)
-			z01.PrintRune(c)
+			z01.PrintRune(rune(a))
+			z01.PrintRune(rune(b))
+			z01.PrintRune(rune(c))
 			z01.PrintRune(44)
 			z01.PrintRune(32)
 		}
