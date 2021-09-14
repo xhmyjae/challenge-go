@@ -9,7 +9,8 @@ func PrintComb() {
 		c := digit % 10
 		if a < b && b < c {
 			z01.PrintRune(a, b, c)
-			z01.PrintRune(44, 32)
+			z01.PrintRune(44)
+			z01.PrintRune(32)
 		}
 	}
 }
