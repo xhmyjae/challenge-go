@@ -15,9 +15,8 @@ func FindNextPrime(nb int) int {
 
 	for !trv {
 		prime++
-		if IsPrime(prime) {
-			trv = true
+		if IsPrime(prime) == true {
+			return prime
 		}
-		return prime
 	}
 }
