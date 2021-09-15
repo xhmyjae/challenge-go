@@ -1,9 +1,8 @@
-package piscine
-
+package main
 func FirstRune(s string) rune {
-	var letter rune
-	for _, letter = range s {
-		break
-	}
-	return letter
+	return rune(s[0])
+}
+
+func main() {
+	print(FirstRune("hehe"))
 }
