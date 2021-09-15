@@ -1,5 +1,9 @@
 package piscine
 
 func FirstRune(s string) rune {
-	return s[0]
+	var letter rune
+	for _, letter = range s {
+		break
+	}
+	return letter
 }
