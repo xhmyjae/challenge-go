@@ -5,7 +5,7 @@ func IsAlpha(s string) bool {
 		return true
 	} else {
 		for _, cara := range s {
-			if !(rune('a') <= cara && cara <= rune('z') || rune('0') <= cara && cara <= rune('9')) {
+			if !(rune('a') <= cara && cara <= rune('z') || rune('0') <= cara && cara <= rune('9') || rune('A') <= cara && cara <= rune('Z')) {
 				return false
 			}
 		}
