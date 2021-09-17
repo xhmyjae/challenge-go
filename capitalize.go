@@ -1,4 +1,4 @@
-package main
+package piscine
 
 func Capitalize(s string) string {
 	var res string
@@ -30,8 +30,4 @@ func Capitalize(s string) string {
 		}
 	}
 	return res
-}
-
-func main() {
-	print(Capitalize("m]GM|U8PIPBAZ"))
 }
