@@ -4,7 +4,7 @@ func Capitalize(s string) string {
 	var res string
 	for index, cara := range s {
 		if index != 0 {
-			var PInd = s[index-1]
+			PInd := s[index-1]
 			if !('a' <= PInd && PInd <= 'z' || '0' <= PInd && PInd <= '9' || 'A' <= PInd && PInd <= 'Z') {
 				if 'a' <= cara && cara <= 'z' {
 					cara -= 32
