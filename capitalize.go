@@ -15,7 +15,12 @@ func Capitalize(s string) string {
 				res += string(cara)
 			}
 		} else {
-			res += string(cara)
+			if 'A' <= cara && cara <= 'Z' {
+				cara += 32
+				res += string(cara)
+			} else {
+				res += string(cara)
+			}
 		}
 	}
 	return res
