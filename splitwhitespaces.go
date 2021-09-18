@@ -31,4 +31,5 @@ func Iswhitespaces(car rune) bool {
 	if car == ' ' || car == '\n' || car == '\t' {
 		return true
 	}
+	return false
 }
