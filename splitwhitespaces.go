@@ -6,7 +6,8 @@ func SplitWhiteSpaces(s string) []string {
 	for index, cara := range s {
 		if index != 0 {
 			PInd := s[index-1]
-			if Iswhitespaces(PInd) == true {
+			RPInd := rune(PInd)
+			if Iswhitespaces(RPInd) {
 				if !(Iswhitespaces(cara)) {
 					nstr += string(cara)
 				}
@@ -26,8 +27,9 @@ func SplitWhiteSpaces(s string) []string {
 	return arr
 }
 
-func Iswhitespaces(car) {
-	if car == ' ' || car == '\n' || car == '\t') {
+func Iswhitespaces(car rune) bool {
+	if car == ' ' || car == '\n' || car == '\t' {
 		return true
 	}
+	return false
 }
