@@ -6,22 +6,28 @@ func SplitWhiteSpaces(s string) []string {
 	for index, cara := range s {
 		if index != 0 {
 			PInd := s[index-1]
-			if PInd == rune(27) || PInd == '\n' || PInd == '\t' {
-				if cara != rune(27) || cara != '\n' || cara != '\t' {
+			if Iswhitespaces(PInd) == true {
+				if !(Iswhitespaces(cara)) {
 					nstr += string(cara)
 				}
 			} else {
-				if cara != rune(27) || cara != '\n' || cara != '\t' {
+				if !(Iswhitespaces(cara)) {
 					nstr += string(cara)
 				} else {
 					arr = append(arr, string(cara))
 				}
 			}
 		} else {
-			if cara != rune(27) || cara != '\n' || cara != '\t' {
+			if !(Iswhitespaces(cara)) {
 				nstr += string(cara)
 			}
 		}
 	}
 	return arr
+}
+
+func Iswhitespaces(car) {
+	if car == ' ' || car == '\n' || car == '\t') {
+		return true
+	}
 }
