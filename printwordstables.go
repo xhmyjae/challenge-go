@@ -2,12 +2,8 @@ package piscine
 
 func PrintWordsTables(a []string) {
 	NLine := string('\n')
+	var res string
 	for i := 0; i < len(a); i++ {
-		a[i] += NLine
+		res += a[i] + NLine
 	}
-	returning(a)
-}
-
-func returning(b []string) []string {
-	return b
 }
