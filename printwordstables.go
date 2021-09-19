@@ -1,6 +1,6 @@
 package piscine
 
-func PrintWordsTables(a []string) {
+func PrintWordsTables(a []string) string {
 	var res string
 	for i := 0; i < len(a); i++ {
 		if i == len(a)-1 {
