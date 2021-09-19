@@ -4,7 +4,7 @@ func SplitWhiteSpaces(s string) []string {
 	var arr []string
 	var nstr string
 	for index, cara := range s {
-		if index != 0 {
+		if index != 0 && index < len(s) {
 			PInd := s[index-1]
 			RPInd := rune(PInd)
 			if Iswhitespaces(RPInd) {
@@ -19,7 +19,7 @@ func SplitWhiteSpaces(s string) []string {
 					nstr = ""
 				}
 			}
-		} else if index == len(s) {
+		} else if index == len(s)-1 {
 			nstr += string(cara)
 			arr = append(arr, string(nstr))
 		} else {
