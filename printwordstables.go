@@ -5,4 +5,9 @@ func PrintWordsTables(a []string) {
 	for i := 0; i < len(a); i++ {
 		a[i] += NLine
 	}
+	returning(a)
+}
+
+func returning(b []string) []string {
+	return b
 }
