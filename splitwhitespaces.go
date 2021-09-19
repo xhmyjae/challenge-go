@@ -19,9 +19,6 @@ func SplitWhiteSpaces(s string) []string {
 					nstr = ""
 				}
 			}
-		} else if index == len(s)+1 {
-			arr = append(arr, string(nstr))
-			nstr = ""
 		} else {
 			if !(Iswhitespaces(cara)) {
 				nstr += string(cara)
