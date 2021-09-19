@@ -9,4 +9,5 @@ func PrintWordsTables(a []string) {
 			res += a[i] + string('\n')
 		}
 	}
+	return res
 }
