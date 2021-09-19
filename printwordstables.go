@@ -1,9 +1,8 @@
 package piscine
 
 func PrintWordsTables(a []string) {
+	NLine := string('\n')
 	for i := 0; i < len(a); i++ {
-		if a[i] != string('\n') {
-			a[i] += string('\n')
-		}
+		a[i] += NLine
 	}
 }
