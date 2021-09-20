@@ -1,29 +1,35 @@
 package main
 
-import "fmt"
+import "os"
 
 func Doop(valueA int, valueB int, op string) {
+	a := 0
 	switch op {
 	case "-":
-		fmt.Println(valueA - valueB)
+		a = valueA - valueB
+		os.Stderr.WriteString(string(rune(a)))
 	case "+":
-		fmt.Println(valueA + valueB)
+		a = valueA + valueB
+		os.Stderr.WriteString(string(rune(a)))
 	case "*":
-		fmt.Println(valueA * valueB)
+		a = valueA * valueB
+		os.Stderr.WriteString(string(rune(a)))
 	case "/":
 		if valueB == 0 {
-			fmt.Println("No division by 0")
+			os.Stderr.WriteString("No division by 0")
 		} else {
-			fmt.Println(valueA / valueB)
+			a = valueA / valueB
+			os.Stderr.WriteString(string(rune(a)))
 		}
 	case "%":
 		if valueB == 0 {
-			fmt.Println("No modulo by 0")
+			os.Stderr.WriteString("No modulo by 0")
 		} else {
-			fmt.Println(valueA % valueB)
+			a = valueA % valueB
+			os.Stderr.WriteString(string(rune(a)))
 		}
 	default:
-		fmt.Println("")
+		os.Stderr.WriteString("")
 	}
 }
 
