@@ -19,7 +19,7 @@ func PrintNbr(n int) {
 	if n < 0 {
 		z01.PrintRune('-')
 	}
-	for i := len(arr) - 1; i >= 0; i-- {
+	for i := len(arr) - 1; i <= 0; i-- {
 		z01.PrintRune(rune('0' + arr[i]))
 	}
 }
