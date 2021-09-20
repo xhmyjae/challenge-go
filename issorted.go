@@ -3,6 +3,10 @@ package piscine
 func IsSorted(f func(a, b int) int, a []int) bool {
 	croissant := true
 
+	if len(a) < 2 {
+		return true
+	}
+
 	if a[0] > a[1] {
 		croissant = false
 	}
