@@ -11,8 +11,8 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 		}
 	}
 	if counterC == len(a)-1 || counterD == len(a)-1 {
-		return true
-	} else {
 		return false
+	} else {
+		return true
 	}
 }
