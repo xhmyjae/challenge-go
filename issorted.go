@@ -7,7 +7,7 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 			counter += 1
 		}
 	}
-	if counter > len(a) {
+	if counter > len(a)-1 {
 		return true
 	} else {
 		return false
