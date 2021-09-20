@@ -1,10 +1,14 @@
 package piscine
 
 func IsSorted(f func(a, b int) int, a []int) bool {
+	counter := 0
 	for _, each := range a {
-		if f(each, each+1) < 0 {
-			return true
+		if a[each] >= a[each]+1 {
+			counter += 1
 		}
 	}
-	return false
+	if counter != 0 {
+		return false
+	}
+	return true
 }
