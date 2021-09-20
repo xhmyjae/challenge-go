@@ -13,7 +13,7 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 			counterD += 1
 		}
 	}
-	if counterC != len(a)-1 || counterD != len(a)-1 {
+	if counterC != len(a) || counterD != len(a) {
 		return false
 	}
 	return true
