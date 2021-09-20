@@ -3,6 +3,9 @@ package piscine
 func IsSorted(f func(a, b int) int, a []int) bool {
 	counterC := 0
 	counterD := 0
+	if len(a) < 2 {
+		return true
+	}
 	for index := range a {
 		if f(index, index+1) < 0 {
 			counterC += 1
@@ -15,7 +18,6 @@ func IsSorted(f func(a, b int) int, a []int) bool {
 	}
 	if counterC == len(a)-1 || counterD == len(a)-1 {
 		return true
-	} else {
-		return false
 	}
+	return false
 }
