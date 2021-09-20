@@ -1,10 +1,8 @@
 package main
 
-import "os"
-
-func Doop(valueA int, valueB int, op string) string{
+func Doop(valueA int, valueB int, op string) string {
 	a := 0
-	vas res string
+	var res string
 	switch op {
 	case "-":
 		a = valueA - valueB
