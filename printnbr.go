@@ -12,9 +12,9 @@ func PrintNbr(n int) {
 		nb = num % 10
 		arr = append(arr, nb)
 		num /= 10
-	}
-	if num < 10 {
-		arr = append(arr, num)
+		if num < 10 {
+			arr = append(arr, num)
+		}
 	}
 	if n < 0 {
 		z01.PrintRune('-')
