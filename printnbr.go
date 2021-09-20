@@ -8,7 +8,7 @@ func PrintNbr(n int) {
 	var arr []int
 	num := n
 	var nb int
-	for num == 1 {
+	for !(num < 10) {
 		if num < 10 {
 			arr = append(arr, num)
 		}
