@@ -8,7 +8,10 @@ func PrintNbr(n int) {
 	var arr []int
 	num := n
 	var nb int
-	for !(num < 10) {
+	for num == 1 {
+		if num < 10 {
+			arr = append(arr, num)
+		}
 		nb = num % 10
 		arr = append(arr, nb)
 		num /= 10
@@ -16,7 +19,7 @@ func PrintNbr(n int) {
 	if n < 0 {
 		z01.PrintRune('-')
 	}
-	for i := len(arr); i > 1; i-- {
+	for i := len(arr) - 1; i >= 0; i-- {
 		z01.PrintRune(rune('0' + arr[i]))
 	}
 }
