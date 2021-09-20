@@ -2,35 +2,37 @@ package main
 
 import "os"
 
-func Doop(valueA int, valueB int, op string) {
+func Doop(valueA int, valueB int, op string) string{
 	a := 0
+	vas res string
 	switch op {
 	case "-":
 		a = valueA - valueB
-		os.Stderr.WriteString(string(rune(a + '0')))
+		res = string(rune(a + '0'))
 	case "+":
 		a = valueA + valueB
-		os.Stderr.WriteString(string(rune(a + '0')))
+		res = string(rune(a + '0'))
 	case "*":
 		a = valueA * valueB
-		os.Stderr.WriteString(string(rune(a + '0')))
+		res = string(rune(a + '0'))
 	case "/":
 		if valueB == 0 {
-			os.Stderr.WriteString("No division by 0")
+			res = string("No division by 0")
 		} else {
 			a = valueA / valueB
-			os.Stderr.WriteString(string(rune(a + '0')))
+			res = string(rune(a + '0'))
 		}
 	case "%":
 		if valueB == 0 {
-			os.Stderr.WriteString("No modulo by 0")
+			res = ("No modulo by 0")
 		} else {
 			a = valueA % valueB
-			os.Stderr.WriteString(string(rune(a + '0')))
+			res = string(rune(a + '0'))
 		}
 	default:
-		os.Stderr.WriteString("")
+		res = string("")
 	}
+	return res
 }
 
 func main() {
