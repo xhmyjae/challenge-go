@@ -2,7 +2,7 @@ package piscine
 
 import "github.com/01-edu/z01"
 
-func PrintNbrInOrder(n int) string {
+func PrintNbrInOrder(n int) {
 	var arr []int
 	num := n
 	for !(num < 10) {
@@ -10,8 +10,7 @@ func PrintNbrInOrder(n int) string {
 		arr = append(arr, nb)
 		num /= 10
 	}
-	var SortedArr []int
-	SortedArr = BubbleSort(arr)
+	SortedArr := BubbleSort(arr)
 	for _, each := range SortedArr {
 		z01.PrintRune(rune('0' + each))
 	}
