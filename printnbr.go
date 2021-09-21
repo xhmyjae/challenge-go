@@ -21,8 +21,9 @@ func PrintNbr(n int) {
 		for i := len(arr) - 1; i >= 0; i-- {
 			z01.PrintRune(rune('0' + arr[i]))
 		}
-	}
-	for i := len(arr) - 1; i >= 0; i-- {
-		z01.PrintRune(rune('0' + arr[i]))
+	} else {
+		for i := len(arr) - 1; i >= 0; i-- {
+			z01.PrintRune(rune('0' + arr[i]))
+		}
 	}
 }
