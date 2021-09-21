@@ -20,7 +20,7 @@ func PrintNbr(n int) {
 	if n < 0 {
 		z01.PrintRune('-')
 		for i := len(arr) - 1; i >= 0; i-- {
-			Nbr1 = arr[i]
+			Nbr1 = num
 			z01.PrintRune(rune(Nbr1 + 48))
 		}
 	} else {
