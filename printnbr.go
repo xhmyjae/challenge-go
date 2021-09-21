@@ -7,11 +7,11 @@ import (
 func PrintNbr(n int) {
 	var arr []int
 	num := n
+	if n < 0 {
+		num = -n
+	}
 	var nb int
 	for num != 0 {
-		if n < 0 {
-			n = -n
-		}
 		nb = num % 10
 		arr = append(arr, nb)
 		num /= 10
