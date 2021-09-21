@@ -6,13 +6,12 @@ func PrintNbrInOrder(n int) {
 	var arr []int
 	num := n
 	for !(num < 10) {
-		if num < 10 {
-			arr = append(arr, num)
-		} else {
-			nb := num % 10
-			arr = append(arr, nb)
-			num /= 10
-		}
+		nb := num % 10
+		arr = append(arr, nb)
+		num /= 10
+	}
+	if num < 10 {
+		arr = append(arr, num)
 	}
 	SortedArr := BubbleSort(arr)
 	for _, each := range SortedArr {
