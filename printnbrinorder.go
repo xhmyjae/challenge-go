@@ -5,10 +5,14 @@ import "github.com/01-edu/z01"
 func PrintNbrInOrder(n int) {
 	var arr []int
 	num := n
-	for num != 0 {
-		nb := num % 10
-		arr = append(arr, nb)
-		num /= 10
+	for num >= 0 {
+		if num < 10 {
+			arr = append(arr, num)
+		} else {
+			nb := num % 10
+			arr = append(arr, nb)
+			num /= 10
+		}
 	}
 	SortedArr := BubbleSort(arr)
 	for _, each := range SortedArr {
