@@ -9,6 +9,9 @@ func PrintNbr(n int) {
 	num := n
 	var nb int
 	for num != 0 {
+		if nb < 0 {
+			n = -n
+		}
 		nb = num % 10
 		arr = append(arr, nb)
 		num /= 10
