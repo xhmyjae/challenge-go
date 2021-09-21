@@ -21,12 +21,12 @@ func PrintNbr(n int) {
 		z01.PrintRune('-')
 		for i := len(arr) - 1; i >= 0; i-- {
 			Nbr1 = arr[i]
-			z01.PrintRune(rune(Nbr1) + '0')
+			z01.PrintRune(rune(Nbr1 + '0'))
 		}
 	} else {
 		for i := len(arr) - 1; i >= 0; i-- {
 			Nbr1 = arr[i]
-			z01.PrintRune(rune(Nbr1) + '0')
+			z01.PrintRune(rune(Nbr1 + '0'))
 		}
 	}
 }
