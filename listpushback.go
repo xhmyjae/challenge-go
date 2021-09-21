@@ -17,5 +17,4 @@ func ListPushBack(l *List, data interface{}) {
 		b = b.Next
 	}
 	b.Next = a
-	l.Tail = a
 }
