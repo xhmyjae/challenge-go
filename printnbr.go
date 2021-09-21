@@ -9,7 +9,7 @@ func PrintNbr(n int) {
 	num := n
 	var nb int
 	for num != 0 {
-		if nb < 0 {
+		if n < 0 {
 			n = -n
 		}
 		nb = num % 10
