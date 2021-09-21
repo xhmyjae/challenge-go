@@ -16,17 +16,14 @@ func PrintNbr(n int) {
 		arr = append(arr, nb)
 		num /= 10
 	}
-	var Nbr1 int
 	if n < 0 {
 		z01.PrintRune('-')
 		for i := len(arr) - 1; i >= 0; i-- {
-			Nbr1 = num
-			z01.PrintRune(rune(Nbr1 + 48))
+			z01.PrintRune(rune(arr[i] + 48))
 		}
 	} else {
 		for i := len(arr) - 1; i >= 0; i-- {
-			Nbr1 = num
-			z01.PrintRune(rune(Nbr1 + 48))
+			z01.PrintRune(rune(arr[i] + 48))
 		}
 	}
 }
