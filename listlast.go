@@ -5,5 +5,5 @@ func ListLast(l *List) interface{} {
 	for b != nil {
 		b = b.Next
 	}
-	return *b
+	return b.Data
 }
