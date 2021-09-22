@@ -1,9 +1,9 @@
 package piscine
 
 func ListSize(l *List) int {
-	compteur := 0
 	b := l.Head
-	for b != nil {
+	var compteur int
+	for compt := 0; b != nil; compt++ {
 		compteur++
 	}
 	return compteur
