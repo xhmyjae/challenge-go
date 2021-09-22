@@ -4,8 +4,8 @@ func ListSize(l *List) int {
 	b := l.Head
 	compteur := 0
 	for b.Next != nil {
-		b = b.Next
 		compteur++
+		b = b.Next
 	}
 	return compteur
 }
