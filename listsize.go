@@ -3,7 +3,7 @@ package piscine
 func ListSize(l *List) int {
 	b := l.Head
 	compteur := 0
-	for b.Next != nil {
+	for b != nil {
 		compteur++
 		b = b.Next
 	}
