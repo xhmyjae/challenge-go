@@ -11,5 +11,5 @@ func main() {
 		fmt.Println("File reading error", err)
 		return
 	}
-	fmt.Println("Contents of file:", string(data))
+	fmt.Println(string(data))
 }
