@@ -9,7 +9,7 @@ import (
 var Args []string
 
 func main() {
-	programArgs := os.Args[len(os.Args):0]
+	programArgs := os.Args[len(os.Args)-1 : 0]
 
 	for index := range programArgs {
 		for _, cara := range programArgs[index] {
