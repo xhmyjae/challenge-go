@@ -14,6 +14,7 @@ func main() {
 	for index := range programArgs {
 		for _, cara := range programArgs[index] {
 			z01.PrintRune(rune(cara))
+			z01.PrintRune(rune('\n'))
 		}
 	}
 }
