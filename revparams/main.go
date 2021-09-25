@@ -11,9 +11,9 @@ var Args []string
 func main() {
 	programArgs := os.Args[1:]
 
-	for _, each := range programArgs {
-		for i := len(each) - 1; i >= 0; i-- {
-			z01.PrintRune(rune(each[i]))
+	for i := len(programArgs) - 1; i >= 0; i-- {
+		for _, cara := range programArgs[i] {
+			z01.PrintRune(rune(cara))
 		}
 		z01.PrintRune(rune('\n'))
 	}
