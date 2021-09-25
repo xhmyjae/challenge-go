@@ -3,13 +3,18 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"os"
 )
 
+var Args []string
+
 func main() {
-	data, err := ioutil.ReadFile("quest8.txt")
+	programArgs := os.Args[0]
+
+	data, err := ioutil.ReadFile(programArgs)
+
 	if err != nil {
 		fmt.Println("File reading error", err)
-		return
 	}
 	fmt.Println(string(data))
 }
