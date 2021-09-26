@@ -8,7 +8,6 @@ func ListAt(l *NodeL, pos int) *NodeL {
 		if count == pos {
 			return iter
 		}
-
 		iter = iter.Next
 		count++
 	}
