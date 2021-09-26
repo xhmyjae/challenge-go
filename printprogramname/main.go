@@ -9,7 +9,7 @@ import (
 var Args []string
 
 func main() {
-	programName := os.Args[0]
+	programName := os.Args[1]
 
 	for _, cara := range programName {
 		z01.PrintRune(cara)
