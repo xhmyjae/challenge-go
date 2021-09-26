@@ -29,6 +29,7 @@ func main() {
 	z01.PrintRune('=')
 	z01.PrintRune(' ')
 	PrintNbr((points.y))
+	z01.PrintRune('\n')
 }
 
 // convertit un nbr en str
