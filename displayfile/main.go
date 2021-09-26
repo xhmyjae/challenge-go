@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	data, err := ioutil.ReadFile("quest8.data")
+	data, err := ioutil.ReadFile("quest8.txt")
 	if err != nil {
 		fmt.Println(err)
 	}
