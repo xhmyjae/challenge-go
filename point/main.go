@@ -17,16 +17,8 @@ func main() {
 
 	setPoint(points)
 
-	z01.PrintRune('x')
-	z01.PrintRune(' ')
-	z01.PrintRune('=')
-	z01.PrintRune(' ')
-	z01.PrintRune(rune('0' + points.x))
-	z01.PrintRune(',')
-	z01.PrintRune(' ')
-	z01.PrintRune('y')
-	z01.PrintRune(' ')
-	z01.PrintRune('=')
-	z01.PrintRune(' ')
-	z01.PrintRune(rune('0' + points.y))
+	res := ("x = " + string(points.x) + ", y = " + string(points.y))
+	for _, each := range res {
+		z01.PrintRune(each)
+	}
 }
