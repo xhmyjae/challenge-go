@@ -1,8 +1,7 @@
 package piscine
 
 func ListAt(l *NodeL, pos int) *NodeL {
-	count := 1
-
+	count := 0
 	iter := l
 	for iter != nil {
 		if count == pos {
