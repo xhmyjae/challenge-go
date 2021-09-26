@@ -16,6 +16,7 @@ func PrintNbrInOrder(n int) {
 	SortedArr := BubbleSort(arr)
 	for _, each := range SortedArr {
 		z01.PrintRune(rune('0' + each))
+
 	}
 }
 
