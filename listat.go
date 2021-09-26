@@ -1,9 +1,16 @@
 package piscine
 
 func ListAt(l *NodeL, pos int) *NodeL {
-	var i int
-	for i < pos {
-		i++
+	count := 1
+
+	iter := l
+	for iter != nil {
+		if count == pos {
+			return iter
+		}
+
+		iter = iter.Next
+		count++
 	}
-	return i.l
+	return nil
 }
