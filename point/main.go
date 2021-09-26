@@ -18,7 +18,11 @@ func main() {
 	setPoint(points)
 
 	res := ("x = " + string(points.x) + ", y = " + string(points.y))
+
 	for _, each := range res {
+		if rune('0') <= each && each <= rune('9') {
+			z01.PrintRune(each + '0')
+		}
 		z01.PrintRune(each)
 	}
 }
