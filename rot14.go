@@ -1,6 +1,6 @@
 package piscine
 
-func rot14(s string) string {
+func Rot14(s string) string {
 	var res string
 	var v rune
 	for _, cara := range s {
