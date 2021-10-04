@@ -1,14 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
-func ComCheck(str []string) {
-	for _, each := range str {
+func main() {
+	for _, each := range os.Args {
 		if each == "01" || each == "galaxy" || each == "galaxy 01" {
 			fmt.Println("Alert!!!")
 		}
 	}
-}
-
-func main() {
 }
