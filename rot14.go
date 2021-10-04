@@ -6,7 +6,7 @@ func Rot14(s string) string {
 	for _, cara := range s {
 		if rune('a') <= cara && cara <= rune('z') {
 			if !(rune('a') <= cara-14 && cara-14 <= rune('z')) {
-				v = rune(108 - (97 - (cara - 14)))
+				v = rune(122 - (97 - (cara - 14)))
 			}
 			res += string(v)
 		} else if rune('A') <= cara && cara <= rune('Z') {
