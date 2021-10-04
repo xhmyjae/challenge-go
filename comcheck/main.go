@@ -8,3 +8,6 @@ func ComCheck(str []string) string {
 	}
 	return ""
 }
+
+func main() {
+}
