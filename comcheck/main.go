@@ -1,19 +1,12 @@
 package main
 
 func ComCheck(str []string) string {
-	var verif bool
 	for _, each := range str {
 		if each == "01" || each == "galaxy" || each == "galaxy 01" {
-			verif = true
-		} else {
-			verif = false
+			return "Alert!!! \n"
 		}
 	}
-	if verif {
-		return "Alert!!!"
-	} else {
-		return ""
-	}
+	return ""
 }
 
 func main() {
