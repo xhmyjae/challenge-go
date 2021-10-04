@@ -6,8 +6,10 @@ type Door struct {
 	state bool
 }
 
-const CLOSE = true
-const OPEN = false
+const (
+	CLOSE = true
+	OPEN  = false
+)
 
 func PrintStr(s string) {
 	for _, r := range s {
