@@ -7,8 +7,6 @@ func Compact(ptr *[]string) int {
 		if !(each == s) {
 			count++
 			*ptr = append(*ptr, each)
-		} else {
-
 		}
 	}
 	return count
