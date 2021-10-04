@@ -8,7 +8,6 @@ func ComCheck(str []string) {
 			fmt.Println("Alert!!!")
 		}
 	}
-	return
 }
 
 func main() {
