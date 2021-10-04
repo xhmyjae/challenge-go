@@ -15,6 +15,8 @@ func Rot14(s string) string {
 				v = 'Z' - (65 - (cara - 14))
 			}
 			res += string(v)
+		} else {
+			res += string(cara)
 		}
 	}
 	return res
