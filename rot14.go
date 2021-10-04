@@ -13,7 +13,7 @@ func Rot14(s string) string {
 			}
 		} else if rune('A') <= cara && cara <= rune('Z') {
 			if !(rune('A') <= cara+14 && cara+14 <= rune('Z')) {
-				v = rune(64 + (65 - (cara + 14) - 90))
+				v = rune(64 + ((cara + 14) - 90))
 				res += string(v)
 			} else {
 				res += string(cara + 14)
