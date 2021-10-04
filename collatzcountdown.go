@@ -2,7 +2,7 @@ package piscine
 
 func CollatzCountdown(start int) int {
 	var count int
-	if start < 0 {
+	if start > 0 {
 		for start != 1 {
 			count++
 			if start%2 == 0 {
