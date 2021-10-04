@@ -5,7 +5,7 @@ func Unmatch(a []int) int {
 	index := 0
 	for i := 0; i < len(a); i++ {
 		if v[index] == v[index+1] {
-			index++
+			index += 2
 			continue
 		} else {
 			return v[i]
