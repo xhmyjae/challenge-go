@@ -6,6 +6,9 @@ func Compact(ptr *[]string) int {
 	for _, each := range *ptr {
 		if !(each == s) {
 			count++
+			*ptr = append(*ptr, each)
+		} else {
+
 		}
 	}
 	return count
