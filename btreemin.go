@@ -9,4 +9,3 @@ func BTreeMin(root *TreeNode) *TreeNode {
 	}
 	return root
 }
-}
