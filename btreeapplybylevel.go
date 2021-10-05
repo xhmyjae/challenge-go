@@ -1,6 +1,6 @@
 package piscine
 
-func BTreeApplyByLevel(root *TreeNode, f func(...interface{}) (int, error)) {
+/*func BTreeApplyByLevel(root *TreeNode, f func(...interface{}) (int, error)) {
 	if root != nil {
 		var queue []*TreeNode
 		queue = append(queue, root)
@@ -26,4 +26,30 @@ func BTreeApplyByLevel(root *TreeNode, f func(...interface{}) (int, error)) {
 
 func RemoveElmt(arr []*TreeNode, index int) {
 	arr = append(arr[:index], arr[index+1:]...)
+}
+*/
+
+import (
+	"github.com/01-edu/z01"
+)
+
+func BTreeApplyByLevel(root *TreeNode, f interface{}) {
+
+	novo := BTreeLevelCount(root)
+	for d := 1; d <= novo; d++ {
+
+		PrintNodesLevel(root, d, f)
+	}
+}
+func PrintNodesLevel(root *TreeNode, level int, f interface{}) {
+	if root != nil {
+		if level == 1 {
+			ar := []interface{}{root.Data}
+			z01.Call(f, ar)
+
+		} else if level > 1 {
+			PrintNodesLevel(root.Left, level-1, f)
+			PrintNodesLevel(root.Right, level-1, f)
+		}
+	}
 }
