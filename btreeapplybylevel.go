@@ -29,25 +29,22 @@ func RemoveElmt(arr []*TreeNode, index int) {
 }
 */
 
-import (
-	"github.com/01-edu/z01"
-)
+func BTreeApplyByLevel(root *TreeNode, f func(...interface{}) (int, error)) {
 
-func BTreeApplyByLevel(root *TreeNode, f interface{}) {
-	novo := BTreeLevelCount(root)
-	for d := 1; d <= novo; d++ {
-		PrintNodesLevel(root, d, f)
+	for i := 1; i <= BTreeLevelCount(root); i++ {
+		AtLevel(root, i, f)
 	}
 }
 
-func PrintNodesLevel(root *TreeNode, level int, f interface{}) {
-	if root != nil {
-		if level == 1 {
-			ar := []interface{}{root.Data}
-			z01.Call(f, ar)
-		} else if level > 1 {
-			PrintNodesLevel(root.Left, level-1, f)
-			PrintNodesLevel(root.Right, level-1, f)
-		}
+func AtLevel(root *TreeNode, i int, f func(...interface{}) (int, error)) {
+	if root == nil {
+		return
 	}
+	if i == 1 {
+		f(root.Data)
+	} else if i > 1 {
+		AtLevel(root.Left, i-1, f)
+		AtLevel(root.Right, i-1, f)
+	}
+
 }
