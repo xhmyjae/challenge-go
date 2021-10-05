@@ -36,10 +36,10 @@ import (
 func BTreeApplyByLevel(root *TreeNode, f interface{}) {
 	novo := BTreeLevelCount(root)
 	for d := 1; d <= novo; d++ {
-
 		PrintNodesLevel(root, d, f)
 	}
 }
+
 func PrintNodesLevel(root *TreeNode, level int, f interface{}) {
 	if root != nil {
 		if level == 1 {
