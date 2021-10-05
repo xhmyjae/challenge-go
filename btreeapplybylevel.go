@@ -17,6 +17,7 @@ func BTreeApplyByLevel(root *TreeNode, f func(...interface{}) (int, error)) {
 			}
 			if right != nil {
 				queue = append(queue, right)
+				f(curr)
 				// BTreeApplyByLevel(right, f)
 			}
 			// }
