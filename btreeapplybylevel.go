@@ -34,7 +34,6 @@ import (
 )
 
 func BTreeApplyByLevel(root *TreeNode, f interface{}) {
-
 	novo := BTreeLevelCount(root)
 	for d := 1; d <= novo; d++ {
 
@@ -46,7 +45,6 @@ func PrintNodesLevel(root *TreeNode, level int, f interface{}) {
 		if level == 1 {
 			ar := []interface{}{root.Data}
 			z01.Call(f, ar)
-
 		} else if level > 1 {
 			PrintNodesLevel(root.Left, level-1, f)
 			PrintNodesLevel(root.Right, level-1, f)
