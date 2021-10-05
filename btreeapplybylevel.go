@@ -20,8 +20,12 @@ func BTreeApplyByLevel(root *TreeNode, f func(...interface{}) (int, error)) {
 				queue = append(queue, right)
 				// BTreeApplyByLevel(right, f)
 			}
-			queue[0] = queue[1]
+			RemoveElmt(queue, 0)
 			// }
 		}
 	}
+}
+
+func RemoveElmt(arr []*TreeNode, index int) {
+	arr = append(arr[:index], arr[index+1:]...)
 }
