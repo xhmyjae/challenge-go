@@ -9,7 +9,7 @@ func BTreeApplyByLevel(root *TreeNode, f func(...interface{}) (int, error)) {
 		for i := BTreeLevelCount(root); i > 0; i-- {
 			// for i := len(queue); i > 0; i-- {
 			// for len(queue) > 0 {
-			curr := queue[0]
+			curr := root
 			f(curr)
 			// for i := BTreeLevelCount(root); i > 0; i-- {
 			if left != nil {
