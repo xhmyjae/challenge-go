@@ -13,14 +13,10 @@ func BTreeApplyByLevel(root *TreeNode, f func(...interface{}) (int, error)) {
 			if curr.Left != nil {
 				queue = append(queue, curr.Left)
 				// BTreeApplyByLevel(left, f)
-			} else if curr.Right != nil {
+			}
+			if curr.Right != nil {
 				queue = append(queue, curr.Right)
 				// BTreeApplyByLevel(right, f)
-			} else {
-				for j := BTreeLevelCount(root) - 1; j > 0; j-- {
-					curr = queue[0]
-					BTreeApplyByLevel(curr, f)
-				}
 			}
 			RemoveElmt(queue, 0)
 			// }
