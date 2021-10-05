@@ -8,15 +8,19 @@ func BTreeApplyByLevel(root *TreeNode, f func(...interface{}) (int, error)) {
 			// for i := len(queue); i > 0; i-- {
 			// for len(queue) > 0 {
 			curr := queue[0]
-			f(curr)
+			BTreeApplyByLevel(curr, f)
 			// for i := BTreeLevelCount(root); i > 0; i-- {
 			if curr.Left != nil {
 				queue = append(queue, curr.Left)
 				// BTreeApplyByLevel(left, f)
-			}
-			if curr.Right != nil {
+			} else if curr.Right != nil {
 				queue = append(queue, curr.Right)
 				// BTreeApplyByLevel(right, f)
+			} else {
+				for j := BTreeLevelCount(root) - 1; j > 0; j-- {
+					curr = queue[0]
+					BTreeApplyByLevel(curr, f)
+				}
 			}
 			RemoveElmt(queue, 0)
 			// }
