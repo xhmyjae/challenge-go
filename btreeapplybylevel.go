@@ -9,14 +9,17 @@ func BTreeApplyByLevel(root *TreeNode, f func(...interface{}) (int, error)) {
 		// for len(queue) > 0 {
 		// curr := queue[0]
 		// queue = queue[0:]
-		if left != nil {
-			// queue = append(queue, left)
-			BTreeApplyByLevel(left, f)
+		for i := BTreeLevelCount(root); i > 0; i-- {
+			if left != nil {
+				// queue = append(queue, left)
+				BTreeApplyByLevel(left, f)
+
+			}
+			if right != nil {
+				// queue = append(queue, right)
+				BTreeApplyByLevel(right, f)
+			}
+			// }
 		}
-		if right != nil {
-			// queue = append(queue, right)
-			BTreeApplyByLevel(right, f)
-		}
-		// }
 	}
 }
