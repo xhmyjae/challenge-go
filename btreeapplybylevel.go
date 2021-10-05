@@ -20,7 +20,7 @@ func BTreeApplyByLevel(root *TreeNode, f func(...interface{}) (int, error)) {
 				queue = append(queue, right)
 				// BTreeApplyByLevel(right, f)
 			}
-			queue = queue[0:]
+			queue = queue[1:]
 			// }
 		}
 	}
